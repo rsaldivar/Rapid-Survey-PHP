@@ -1,0 +1,122 @@
+.logo {
+	padding:3px 0 0 0;
+}
+.required-img {
+	color:#CC0000;
+}
+.input-xlarge {
+    width: 270px;
+}	
+.bs-docs-nav {
+	background-color:#000000 !important; 
+}
+
+.clear {
+	clear:both;
+}
+
+.login-title-size {
+	width:120px !important; 
+}
+/*<tr> style, list submission order*/
+.order_active{
+ background: #e0e0e0; 
+}
+/*<tr> style, list submission order*/
+.order_inactive{
+ background: #fdfdfd; 
+}
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*Admin Encuestas-Preguntas*/
+#divSubPregunta > p > input , #divSubLabel > p > input , #divSubOpcion > p > input{
+    width:98%;
+}
+#divSubPregunta > p > span , #divSubLabel > p > span,#divSubOpcion  > p > span {
+    float: right;
+    margin: -30px 0;
+}
+.wizard > .content > .body label.error {
+position: absolute;
+}
+
+
+
+
+
+
+/* 
+ G *eneric Styling, for Desktops/Laptops 
+ */
+table { 
+	width: 100%; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+}
+th { 
+	background: #333; 
+	color: white; 
+	font-weight: bold; 
+}
+td, th { 
+	padding: 6px; 
+	text-align: left; 
+}
+
+/*
+
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 360px),
+(min-device-width: 368px) and (max-device-width: 1024px)  {
+
+	
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 95%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		font-weight:bold;
+		text-align:right;
+	}
+	tfoot > tr > td:before{    
+		font-size: 0;
+	}
+	
+}
